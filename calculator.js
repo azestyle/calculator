@@ -52,17 +52,18 @@ function calculate(element) {
   
   let operator = element.match(/[+\-*/]/g);
   let total = number[0];
+  let index = 0;
   for (let b of operator) {
-    let index = 0;
     if (b === "+") {
-      total = total + number[index + 2];
+      total = total + number[index + 1];
     } else if (b === "-") {
-      total = total - number[index + 2];
+      total = total - number[index + 1];
     } else if (b === "*") {
-      total = total * number[index + 2];
+      total = total * number[index + 1];
     } else if (b === "/") {
-      total = total / number[index + 2];
+      total = total / number[index + 1];
     }
+    index++
   }
   input.innerText = total;
 }
