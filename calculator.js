@@ -55,13 +55,13 @@ function calculate(element) {
   for (let b of operator) {
     let index = 0;
     if (b === "+") {
-      total = total + number[index + 1];
+      total = total + number[index + 2];
     } else if (b === "-") {
-      total = total - number[index + 1];
+      total = total - number[index + 2];
     } else if (b === "*") {
-      total = total * number[index + 1];
+      total = total * number[index + 2];
     } else if (b === "/") {
-      total = total / number[index + 1];
+      total = total / number[index + 2];
     }
   }
   input.innerText = total;
